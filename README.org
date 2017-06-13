@@ -1,0 +1,33 @@
+** Introduction
+
+Right now, PPType has lots of public and internal documentation project, such
+as:
+
+- https://github.com/ppresume/docs-notes
+- https://github.com/pptype/pandoc-markdown
+
+We need a better foundation to make our workflow smooth, such as:
+
+- How to install TeX/Pandoc in Windows/Linux/macOS? We need detailed
+  documentation and reproducible workflows.
+- Drive all workflow by [[https://github.com/ruby/rake][rake]] and [[http://guardgem.org/][guard]]
+- Consistent workflows like:
+  - ~rake tex~, generate TeX format
+  - ~rake pdf~, generate PDF by compiling TeX document
+  - ~rake jpg~, convert PDF to jpg images
+    - Should add an optional param to control jpg image's density and quality
+  - ~rake png~, convert PDF to png images
+    - Same as jpg images, should add an optional param to control jpg image's
+      density and quality
+    - Besides, should add another param to control whether or not we should add
+      a white background to png images
+  - ~rake clean~ and ~rake clobber~ for cleaning intermediate temporary files
+  - use ~guard~ to automate build when "source files" change
+- Need a good choice of font for both English and Chinese
+- Need tools like [[https://github.com/BYVoid/OpenCC][OpenCC]] to convert between Simplified Chinese and Traditional
+  Chinese
+- Various tunes for pandoc
+  - Customize latex header file for both Chinese and English
+  - Try pandoc's [[http://pandoc.org/MANUAL.html#smart-punctuation][smart-punctuation]] to ease writings for punctuation
+  - Support multiple plain text format, at least for Markdown and Org-mode
+- Integrate travis-ci and circle-ci for automatic documentation build
