@@ -31,3 +31,8 @@ We need a better foundation to make our workflow smooth, such as:
   - Try pandoc's [[http://pandoc.org/MANUAL.html#smart-punctuation][smart-punctuation]] to ease writings for punctuation
   - Support multiple plain text format, at least for Markdown and Org-mode
 - Integrate travis-ci and circle-ci for automatic documentation build
+  - Need to figure out a better way to install texlive in various ci system
+    since the whole "texlive-full" packages is about 1.7 GB, even for
+    travis-ci/circle-ci, it still need SOME time to install this every time it
+    compiles document for us. We need to install texlive-full for normal use,
+    while for CI, just install a minimal tiny texlive distribution.
